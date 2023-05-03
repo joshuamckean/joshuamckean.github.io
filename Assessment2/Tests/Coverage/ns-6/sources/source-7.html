@@ -111,11 +111,11 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;
 &nbsp;        // not available and money more than cost
 <b class="fc">&nbsp;        fryingStation.available = 0;</b>
-<b class="fc">&nbsp;        gameData.money = 3;</b>
+<b class="fc">&nbsp;        gameData.money = 6;</b>
 <b class="fc">&nbsp;        ByteArrayOutputStream output1 = new ByteArrayOutputStream();</b>
 <b class="fc">&nbsp;        System.setOut(new PrintStream(output1));</b>
 <b class="fc">&nbsp;        fryingStation.interact(1);</b>
-<b class="fc">&nbsp;        assertEquals(3-fryingStation.cost,gameData.money,0.00001);</b>
+<b class="fc">&nbsp;        assertEquals(6-fryingStation.cost,gameData.money,0.00001);</b>
 <b class="fc">&nbsp;        assertEquals(1,fryingStation.available);</b>
 <b class="fc">&nbsp;        assertNotEquals(0,fryingStation.available);</b>
 <b class="fc">&nbsp;        assertEquals(&quot;Disabled&quot;+System.lineSeparator(), output1.toString());</b>
@@ -135,7 +135,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;
 &nbsp;        // available and money more than cost and no super item
 <b class="fc">&nbsp;       fryingStation.available = 1;</b>
-<b class="fc">&nbsp;        gameData.money = 3;</b>
+<b class="fc">&nbsp;        gameData.money = 6;</b>
 <b class="fc">&nbsp;        IngredientType ingredientType = new IngredientType(&quot;meat&quot;);</b>
 <b class="fc">&nbsp;        Ingredient ingredient3 = new Ingredient(ingredientType,-1,-1,3);</b>
 <b class="fc">&nbsp;        fryingStation.interact(1);</b>
@@ -144,7 +144,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 <b class="fc">&nbsp;        fryingStation.interact(1);</b>
 <b class="fc">&nbsp;        assertEquals(&quot;no item to fry...&quot;+System.lineSeparator(), output3.toString());</b>
 <b class="fc">&nbsp;        assertNotEquals(&quot;Disabled&quot;+System.lineSeparator(), output3.toString());</b>
-<b class="fc">&nbsp;        assertEquals(3,gameData.money,0.00001);</b>
+<b class="fc">&nbsp;        assertEquals(6,gameData.money,0.00001);</b>
 &nbsp;
 &nbsp;        // available and money more than cost and super item frying process is 3
 <b class="fc">&nbsp;        fryingStation.item = ingredient3;</b>
@@ -155,7 +155,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 <b class="fc">&nbsp;        assertNotEquals(&quot;Disabled&quot;+System.lineSeparator(), output4.toString());</b>
 <b class="fc">&nbsp;        assertNotEquals(&quot;no item to fry...&quot;+System.lineSeparator(), output4.toString());</b>
 <b class="fc">&nbsp;        assertNotEquals(&quot;the item is already fried...&quot;+System.lineSeparator(), output4.toString());</b>
-<b class="fc">&nbsp;        assertEquals(3,gameData.money,0.00001);</b>
+<b class="fc">&nbsp;        assertEquals(6,gameData.money,0.00001);</b>
 &nbsp;
 &nbsp;        // available and money more than cost and super item frying process is 2
 <b class="fc">&nbsp;        Ingredient ingredient2= new Ingredient(ingredientType,-1,-1,1);</b>
@@ -167,7 +167,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 <b class="fc">&nbsp;        assertNotEquals(&quot;Disabled&quot;+System.lineSeparator(), output5.toString());</b>
 <b class="fc">&nbsp;        assertNotEquals(&quot;no item to fry...&quot;+System.lineSeparator(), output5.toString());</b>
 <b class="fc">&nbsp;        assertNotEquals(&quot;the item is burnt...&quot;+System.lineSeparator(), output5.toString());</b>
-<b class="fc">&nbsp;        assertEquals(3,gameData.money,0.00001);</b>
+<b class="fc">&nbsp;        assertEquals(6,gameData.money,0.00001);</b>
 &nbsp;
 &nbsp;        // not available and money more than cost and super item frying process is 3
 <b class="fc">&nbsp;        fryingStation.item = ingredient3;</b>
@@ -176,7 +176,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 <b class="fc">&nbsp;        System.setOut(new PrintStream(output6));</b>
 <b class="fc">&nbsp;        fryingStation.timeKeyHeld = 4;</b>
 <b class="fc">&nbsp;        fryingStation.interact(1);</b>
-<b class="fc">&nbsp;        assertEquals(3-fryingStation.cost,gameData.money,0.00001);</b>
+<b class="fc">&nbsp;        assertEquals(6-fryingStation.cost,gameData.money,0.00001);</b>
 <b class="fc">&nbsp;        assertEquals(1,fryingStation.available);</b>
 <b class="fc">&nbsp;        assertNotEquals(0,fryingStation.available);</b>
 <b class="fc">&nbsp;        assertEquals(&quot;Disabled&quot;+System.lineSeparator(), output6.toString());</b>
@@ -188,11 +188,11 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;        // not available and money more than cost and super item frying process is 2
 <b class="fc">&nbsp;        fryingStation.item = ingredient2;</b>
 <b class="fc">&nbsp;        fryingStation.available=0;</b>
-<b class="fc">&nbsp;        gameData.money = 3;</b>
+<b class="fc">&nbsp;        gameData.money = 6;</b>
 <b class="fc">&nbsp;        ByteArrayOutputStream output7 = new ByteArrayOutputStream();</b>
 <b class="fc">&nbsp;        System.setOut(new PrintStream(output7));</b>
 <b class="fc">&nbsp;        fryingStation.interact(1);</b>
-<b class="fc">&nbsp;        assertEquals(3-fryingStation.cost,gameData.money,0.00001);</b>
+<b class="fc">&nbsp;        assertEquals(6-fryingStation.cost,gameData.money,0.00001);</b>
 <b class="fc">&nbsp;        assertEquals(1,fryingStation.available);</b>
 <b class="fc">&nbsp;        assertNotEquals(0,fryingStation.available);</b>
 <b class="fc">&nbsp;        assertEquals(&quot;Disabled&quot;+System.lineSeparator(), output7.toString());</b>
@@ -204,7 +204,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 <b class="fc">&nbsp;        Ingredient ingredientNeg1 = new Ingredient(ingredientType,-1,-1,-1);</b>
 <b class="fc">&nbsp;        fryingStation.item = ingredientNeg1;</b>
 <b class="fc">&nbsp;        fryingStation.available = 1;</b>
-<b class="fc">&nbsp;        gameData.money =3;</b>
+<b class="fc">&nbsp;        gameData.money =6;</b>
 <b class="fc">&nbsp;        fryingStation.timeKeyHeld = 3;</b>
 <b class="fc">&nbsp;        ByteArrayOutputStream output8 = new ByteArrayOutputStream();</b>
 <b class="fc">&nbsp;        System.setOut(new PrintStream(output8));</b>
@@ -214,7 +214,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 <b class="fc">&nbsp;        assertNotEquals(&quot;Disabled&quot;+System.lineSeparator(), output8.toString());</b>
 <b class="fc">&nbsp;        assertNotEquals(&quot;no item to fry...&quot;+System.lineSeparator(), output8.toString());</b>
 <b class="fc">&nbsp;        assertNotEquals(&quot;the item is already fried...&quot;+System.lineSeparator(), output8.toString());</b>
-<b class="fc">&nbsp;        assertEquals(3,gameData.money,0.00001);</b>
+<b class="fc">&nbsp;        assertEquals(6,gameData.money,0.00001);</b>
 &nbsp;
 &nbsp;        // not available and money more and super item frying process is -1
 <b class="fc">&nbsp;        fryingStation.available = 0;</b>
@@ -223,7 +223,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 <b class="fc">&nbsp;        fryingStation.timeKeyHeld=4;</b>
 <b class="fc">&nbsp;        fryingStation.interact(1);</b>
 <b class="fc">&nbsp;        assertEquals(4,fryingStation.timeKeyHeld,0.00001);</b>
-<b class="fc">&nbsp;        assertEquals(3-fryingStation.cost,gameData.money,0.00001);</b>
+<b class="fc">&nbsp;        assertEquals(6-fryingStation.cost,gameData.money,0.00001);</b>
 <b class="fc">&nbsp;        assertEquals(1,fryingStation.available);</b>
 <b class="fc">&nbsp;        assertNotEquals(0,fryingStation.available);</b>
 <b class="fc">&nbsp;        assertEquals(&quot;Disabled&quot;+System.lineSeparator(), output9.toString());</b>
@@ -361,7 +361,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2023-05-03 01:14</div>
+    <div style="float:right;">generated on 2023-05-03 01:57</div>
 </div>
 </body>
 </html>

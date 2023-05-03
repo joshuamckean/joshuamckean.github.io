@@ -111,11 +111,11 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;
 &nbsp;        // not available and money more than cost
 <b class="fc">&nbsp;        cuttingStation.available = 0;</b>
-<b class="fc">&nbsp;        gameData.money = 3;</b>
+<b class="fc">&nbsp;        gameData.money = 6;</b>
 <b class="fc">&nbsp;        ByteArrayOutputStream output1 = new ByteArrayOutputStream();</b>
 <b class="fc">&nbsp;        System.setOut(new PrintStream(output1));</b>
 <b class="fc">&nbsp;        cuttingStation.interact(1);</b>
-<b class="fc">&nbsp;        assertEquals(3-cuttingStation.cost,gameData.money,0.00001);</b>
+<b class="fc">&nbsp;        assertEquals(6-cuttingStation.cost,gameData.money,0.00001);</b>
 <b class="fc">&nbsp;        assertEquals(1,cuttingStation.available);</b>
 <b class="fc">&nbsp;        assertNotEquals(0,cuttingStation.available);</b>
 <b class="fc">&nbsp;        assertEquals(&quot;Disabled&quot;+System.lineSeparator(), output1.toString());</b>
@@ -133,7 +133,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 <b class="fc">&nbsp;        assertNotEquals(1-cuttingStation.cost,gameData.money,0.00001);</b>
 &nbsp;        // available and money more than cost and no super item
 <b class="fc">&nbsp;        cuttingStation.available = 1;</b>
-<b class="fc">&nbsp;        gameData.money = 3;</b>
+<b class="fc">&nbsp;        gameData.money = 6;</b>
 <b class="fc">&nbsp;        IngredientType ingredientType = new IngredientType(&quot;tomato&quot;);</b>
 <b class="fc">&nbsp;        Ingredient ingredient1 = new Ingredient(ingredientType,1,-1,-1);</b>
 <b class="fc">&nbsp;        cuttingStation.interact(1);</b>
@@ -142,7 +142,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 <b class="fc">&nbsp;        cuttingStation.interact(1);</b>
 <b class="fc">&nbsp;        assertEquals(&quot;no item to cut...&quot;+System.lineSeparator(), output3.toString());</b>
 <b class="fc">&nbsp;        assertNotEquals(&quot;disabled&quot;+System.lineSeparator(), output3.toString());</b>
-<b class="fc">&nbsp;        assertEquals(3,gameData.money,0.00001);</b>
+<b class="fc">&nbsp;        assertEquals(6,gameData.money,0.00001);</b>
 &nbsp;        // available and money more than cost and super item cutting process is 1
 <b class="fc">&nbsp;        cuttingStation.item = ingredient1;</b>
 <b class="fc">&nbsp;        ByteArrayOutputStream output4 = new ByteArrayOutputStream();</b>
@@ -151,14 +151,14 @@ Current scope:     <a href="../../index.html">all classes</a>
 <b class="fc">&nbsp;        assertEquals(&quot;Already cut...&quot;+System.lineSeparator(), output4.toString());</b>
 <b class="fc">&nbsp;        assertNotEquals(&quot;disabled&quot;+System.lineSeparator(), output4.toString());</b>
 <b class="fc">&nbsp;        assertNotEquals(&quot;no item to cut...&quot;+System.lineSeparator(), output4.toString());</b>
-<b class="fc">&nbsp;        assertEquals(3,gameData.money,0.00001);</b>
+<b class="fc">&nbsp;        assertEquals(6,gameData.money,0.00001);</b>
 &nbsp;        // not available and money more than cost and super item cutting process is 1
 <b class="fc">&nbsp;        cuttingStation.available=0;</b>
 <b class="fc">&nbsp;        ByteArrayOutputStream output5 = new ByteArrayOutputStream();</b>
 <b class="fc">&nbsp;        System.setOut(new PrintStream(output5));</b>
 <b class="fc">&nbsp;        cuttingStation.timeKeyHeld = 4;</b>
 <b class="fc">&nbsp;        cuttingStation.interact(1);</b>
-<b class="fc">&nbsp;        assertEquals(3-cuttingStation.cost,gameData.money,0.00001);</b>
+<b class="fc">&nbsp;        assertEquals(6-cuttingStation.cost,gameData.money,0.00001);</b>
 <b class="fc">&nbsp;        assertEquals(1,cuttingStation.available);</b>
 <b class="fc">&nbsp;        assertNotEquals(0,cuttingStation.available);</b>
 <b class="fc">&nbsp;        assertEquals(&quot;Disabled&quot;+System.lineSeparator(), output5.toString());</b>
@@ -169,7 +169,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 <b class="fc">&nbsp;        cuttingStation.item = ingredientNeg1;</b>
 <b class="fc">&nbsp;        cuttingStation.available = 1;</b>
 <b class="fc">&nbsp;        cuttingStation.timeKeyHeld = 3;</b>
-<b class="fc">&nbsp;        gameData.money =3;</b>
+<b class="fc">&nbsp;        gameData.money =6;</b>
 <b class="fc">&nbsp;        ByteArrayOutputStream output6 = new ByteArrayOutputStream();</b>
 <b class="fc">&nbsp;        System.setOut(new PrintStream(output6));</b>
 <b class="fc">&nbsp;        cuttingStation.interact(1);</b>
@@ -178,7 +178,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 <b class="fc">&nbsp;        assertNotEquals(&quot;disabled&quot;+System.lineSeparator(), output6.toString());</b>
 <b class="fc">&nbsp;        assertNotEquals(&quot;no item to cut...&quot;+System.lineSeparator(), output6.toString());</b>
 <b class="fc">&nbsp;        assertNotEquals(&quot;Already cut...&quot;+System.lineSeparator(), output6.toString());</b>
-<b class="fc">&nbsp;        assertEquals(3,gameData.money,0.00001);</b>
+<b class="fc">&nbsp;        assertEquals(6,gameData.money,0.00001);</b>
 &nbsp;        // not available and money more and super item cutting process is -1
 <b class="fc">&nbsp;        cuttingStation.available = 0;</b>
 <b class="fc">&nbsp;        cuttingStation.timeKeyHeld=4;</b>
@@ -186,7 +186,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 <b class="fc">&nbsp;        System.setOut(new PrintStream(output7));</b>
 <b class="fc">&nbsp;        cuttingStation.interact(1);</b>
 <b class="fc">&nbsp;        assertEquals(4,cuttingStation.timeKeyHeld,0.00001);</b>
-<b class="fc">&nbsp;        assertEquals(3-cuttingStation.cost,gameData.money,0.00001);</b>
+<b class="fc">&nbsp;        assertEquals(6-cuttingStation.cost,gameData.money,0.00001);</b>
 <b class="fc">&nbsp;        assertEquals(1,cuttingStation.available);</b>
 <b class="fc">&nbsp;        assertNotEquals(0,cuttingStation.available);</b>
 <b class="fc">&nbsp;        assertEquals(&quot;Disabled&quot;+System.lineSeparator(), output7.toString());</b>
@@ -276,7 +276,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2023-05-03 01:14</div>
+    <div style="float:right;">generated on 2023-05-03 01:57</div>
 </div>
 </body>
 </html>
