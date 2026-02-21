@@ -4,6 +4,8 @@ const port = 3000
 
 app.use(express.static('public'))
 
+app.use('/styles', express.static('styles'));
+
 app.listen(port, () => {
   console.log(`Listening at localhost:${port}`)
 })
