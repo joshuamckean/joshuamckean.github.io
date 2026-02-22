@@ -8,12 +8,32 @@
         <link rel="stylesheet" href="./styles/site.css">
     </head>
     <body>
+        <nav class="top-bar">
+            <ul class="nav-list" id="main-nav">
+                <li>
+                    <a href="" class="nav-link" title="Home" style="padding:0 1rem;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;">
+                            <path d="M3 10.5L12 3L21 10.5V20C21 20.55 20.55 21 20 21H4C3.45 21 3 20.55 3 20V10.5Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 21V13H15V21" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </li>
+                <li><a href="/about-me" class="nav-link">About Me</a></li>
+                <li><a href="/projects" class="nav-link">Projects</a></li>
+                <li><a href="/contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
         <main>
-            <h1 class="text-center">Joshua McKean</h1>
-            <h2 class="h2 text-center">Site under construction</h2>
-            <p class="text-center">
-                Welcome to my personal website! Here you will be able to find information about me, my projects, and how to contact me.
-            </p>
+            <div class="container">
+                <div class="text-center mt-5">
+                    <h1>Joshua McKean</h1>
+                    <h2 class="h2">UX/Interaction Designer</h2>
+                    <p>
+                        I am a designer working on shaping public services for the digital future.<br><br>
+                        I am currently working on building digital platforms for government energy efficiency and low carbon schemes at <a class="nav-link-inline" href="https://www.ofgem.gov.uk/environmental-and-social-schemes" target="_blank">Ofgem</a>.
+                    </p>
+                    <strong style="color: #ff0000; margin-top: 1rem;">Note: This site is still being developed, and as such is likely missing content. Bear with me!</strong><br>
+                </div>
                 <div class="text-center" style="margin: 2rem 0;">
                     <a href="https://github.com/joshuamckean" target="_blank" style="display:inline-block; margin:0 1rem;" title="GitHub">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,13 +47,8 @@
                         </svg>
                     </a>
                 </div>
-            <!-- The following button should only be enabled when running locally:
-
-            <form action="/components" method="get" style="text-align: center;">
-                <button class="btn btn-primary">Components</button>
-            </form>
-
-            -->
+            </div>
+        </main>
         </main>
     </body>
 </html>
